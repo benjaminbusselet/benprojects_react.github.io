@@ -1,5 +1,6 @@
 {
   "name": "benprojects_react",
+  "homepage": "http://benprojects.org",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
