@@ -86,6 +86,7 @@ export default function Projets() {
                         <div className="flip-card-back">
                             <div className="flip-card-text">
                                 <small>Un site d'avis de restaurants en JavaScript</small>
+                                <small>Site en cours d'amélioration</small>
                                 <a href="../projects/kelresto/" target="_blank" rel="noreferrer">
                                     Voir le site
                                 </a>
