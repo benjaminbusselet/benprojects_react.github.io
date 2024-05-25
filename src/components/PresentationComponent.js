@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import cv from '../assets/files/cv.pdf';
 
 export default function Presentation() {
     const [isMobile, setIsMobile] = useState(false);
@@ -45,7 +46,7 @@ export default function Presentation() {
                     </div>
                     <div className="row">
                         <i className="fas fa-file-download" aria-hidden="true"></i>
-                        <a href="assets/files/cv.pdf"> Téléchargez mon CV au format PDF</a>
+                        <a href={cv} target="_blank" rel="noopener noreferrer">Téléchargez mon CV au format PDF</a>
                     </div>
                 </div>
             </article>
