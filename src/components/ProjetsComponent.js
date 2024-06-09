@@ -4,6 +4,7 @@ import img2 from '../assets/2.png';
 import img3 from '../assets/3.png';
 import img4 from '../assets/4.png';
 import img5 from '../assets/5.png';
+import img6 from '../assets/6.png';
 
 export default function Projets() {
     const [isMobile, setIsMobile] = useState(false);
@@ -55,7 +56,7 @@ export default function Projets() {
                         </div>
                         <div className="flip-card-back">
                             <div className="flip-card-text">
-                                <small>Un générateur de citations en JavaScript</small>
+                                <small>Un générateur de score de football</small>
                                 <a href="../projects/lepredicator/" target="_blank" rel="noreferrer">
                                     Voir le site
                                 </a>
@@ -86,7 +87,6 @@ export default function Projets() {
                         <div className="flip-card-back">
                             <div className="flip-card-text">
                                 <small>Un site d'avis de restaurants en JavaScript</small>
-                                <small>Site en cours d'amélioration</small>
                                 <a href="../projects/kelresto/" target="_blank" rel="noreferrer">
                                     Voir le site
                                 </a>
@@ -103,6 +103,23 @@ export default function Projets() {
                             <div className="flip-card-text">
                                 <small>Un site de prise de rendez-vous</small>
                                 <a href="https://www.puresophro.com" target="_blank" rel="noreferrer">
+                                    Voir le site
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="card flip-card6">
+                    <div className="flip-card-inner">
+                        <div className="flip-card-front">
+                            <img src={img6} alt="img6" title="img6" />
+                        </div>
+                        <div className="flip-card-back">
+                            <div className="flip-card-text">
+                                <small>Le site ultime pour prédire les résultats des matchs de l'Euro 2024 !</small>
+                                <br />
+                                <br />
+                                <a href="../projects/euro2024predicator" target="_blank" rel="noreferrer">
                                     Voir le site
                                 </a>
                             </div>

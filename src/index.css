@@ -266,6 +266,10 @@ li,
     width: 18vw;
 }
 
+.flip-card-text small {
+    margin-bottom: 2vh;
+}
+
 /* Media Queries */
 
 @media only screen and (max-width: 750px) {
