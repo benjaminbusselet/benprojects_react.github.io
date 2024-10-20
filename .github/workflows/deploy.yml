@@ -1,11 +1,10 @@
 name: Deploy React to GitHub Pages
 
-# Ajoute 'workflow_dispatch' pour permettre le déclenchement manuel
 on:
   push:
     branches:
-      - main  # Trigger the action when changes are pushed to the 'main' branch
-  workflow_dispatch:  # Permet le déclenchement manuel
+      - main
+  workflow_dispatch:
 
 jobs:
   build:
@@ -14,6 +13,12 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+
+      # Ajoute cette étape pour nettoyer le dépôt et réinitialiser l'URL distante
+      - name: Clean the repository
+        run: |
+          git remote rm origin
+          git remote add origin https://github.com/benjaminbusselet/cv.git
 
       - name: Setup Node.js
         uses: actions/setup-node@v2
