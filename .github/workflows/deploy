@@ -1,0 +1,36 @@
+name: Deploy React to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Trigger the action when changes are pushed to the 'main' branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the repository code
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Step 2: Setup Node.js environment
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'  # You can adjust the Node version if necessary
+
+      # Step 3: Install project dependencies (from package.json)
+      - name: Install dependencies
+        run: npm install
+
+      # Step 4: Build the React project (generates the 'build' directory)
+      - name: Build project
+        run: npm run build
+
+      # Step 5: Deploy the 'build' directory to GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build  # This is where the build files are generated
