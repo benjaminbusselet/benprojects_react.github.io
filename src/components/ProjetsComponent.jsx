@@ -42,7 +42,7 @@ export default function Projets() {
                         <div className="flip-card-back">
                             <div className="flip-card-text">
                                 <small>Un site OnePage 100% responsive pour un festival</small>
-                                <a href="../projects/lesfilmsdepleinair/" target="_blank" rel="noreferrer">
+                                <a href="https://benjaminbusselet.github.io/lesfilmsdepleinair_react/#" target="_blank" rel="noreferrer">
                                     Voir le site
                                 </a>
                             </div>
