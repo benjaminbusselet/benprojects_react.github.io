@@ -109,23 +109,6 @@ export default function Projets() {
                         </div>
                     </div>
                 </div>
-                <div className="card flip-card6">
-                    <div className="flip-card-inner">
-                        <div className="flip-card-front">
-                            <img src={img6} alt="img6" title="img6" />
-                        </div>
-                        <div className="flip-card-back">
-                            <div className="flip-card-text">
-                                <small>Le site ultime pour prédire les résultats des matchs de l'Euro 2024 !</small>
-                                <br />
-                                <br />
-                                <a href="../projects/euro2024predicator" target="_blank" rel="noreferrer">
-                                    Voir le site
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </article>
         </section>
     );
