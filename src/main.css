@@ -195,11 +195,6 @@ li,
     justify-content: center;
 }
 
-.projets article>* {
-    margin-bottom: 1em;
-    width: 20vw;
-}
-
 .projets article {
     column-gap: 2vw;
     display: flex;
