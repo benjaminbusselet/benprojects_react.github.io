@@ -1,33 +1,30 @@
-import React, { useState, useEffect } from 'react';
-import Presentation from './components/PresentationComponent';
-import DevWeb from './components/DevWebComponent';
-import Experiences from './components/ExperiencesComponent';
-import Formations from './components/FormationsComponent';
-import Autres from './components/AutresComponent';
-import Sidebar from './components/Sidebar';
-import Projets from './components/ProjetsComponent';
-import Hobbys from './components/HobbysComponent';
+import React, { useState, useEffect } from "react";
+import Presentation from "./components/PresentationComponent";
+import DevWeb from "./components/DevWebComponent";
+import Experiences from "./components/ExperiencesComponent";
+import Formations from "./components/FormationsComponent";
+import Autres from "./components/AutresComponent";
+import Sidebar from "./components/Sidebar";
+import Projets from "./components/ProjetsComponent";
 
 function App() {
   const [isMobile, setIsMobile] = useState(false);
-  const [activeComponent, setActiveComponent] = useState('presentation');
+  const [activeComponent, setActiveComponent] = useState("presentation");
 
   const renderActiveComponent = () => {
     switch (activeComponent) {
-      case 'presentation':
+      case "presentation":
         return <Presentation />;
-      case 'devweb':
+      case "devweb":
         return <DevWeb />;
-      case 'autres':
+      case "autres":
         return <Autres />;
-      case 'experiences':
+      case "experiences":
         return <Experiences />;
-      case 'formations':
+      case "formations":
         return <Formations />;
-      case 'projets':
+      case "projets":
         return <Projets />;
-      case 'hobbys':
-        return <Hobbys />;
       default:
         return null;
     }
@@ -38,10 +35,10 @@ function App() {
       setIsMobile(window.innerWidth < 768);
     };
 
-    window.addEventListener('resize', handleWindowResize);
+    window.addEventListener("resize", handleWindowResize);
     handleWindowResize();
     return () => {
-      window.removeEventListener('resize', handleWindowResize);
+      window.removeEventListener("resize", handleWindowResize);
     };
   }, [activeComponent]);
 
@@ -53,7 +50,7 @@ function App() {
     <>
       <Sidebar setActiveComponent={setActiveComponent} onClick={handleClick} />
 
-      <main className={`${isMobile ? 'haut' : ''}`}>
+      <main className={`${isMobile ? "haut" : ""}`}>
         {renderActiveComponent()}
       </main>
     </>
